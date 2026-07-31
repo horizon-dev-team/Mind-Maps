@@ -49,6 +49,27 @@
   --bg: rgba(167, 135, 71, 0.14) !important;
 }
 
+:root[saved-theme="dark"] blockquote {
+  border-inline-start-color: rgba(167, 135, 71, 0.7) !important;
+  color: var(--darkgray) !important;
+}
+
+:root[saved-theme="dark"] blockquote p {
+  margin: 0;
+  padding-left: 0.75rem !important;
+}
+
+:root[saved-theme="dark"] a.internal,
+:root[saved-theme="dark"] a.external {
+  color: var(--link-color) !important;
+}
+
+:root[saved-theme="dark"] a.internal.tag-link,
+:root[saved-theme="dark"] a.internal.tag-link::before {
+  color: var(--link-color) !important;
+  background-color: transparent !important;
+}
+
 .sidebar.left,
 .sidebar.right,
 .sidebar {
