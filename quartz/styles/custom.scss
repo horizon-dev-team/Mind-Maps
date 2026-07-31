@@ -1,3 +1,33 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+@media all and (min-width: 1200px) {
+  div#quartz-root.page {
+    /* workaround for reader-mode */
+    display: grid !important;
+    place-items: center;
+    width: 100%;
+    min-width: 100dvw;
+    max-width: 100dvw;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  div#quartz-root.page div#quartz-body {
+    /* workaround for reader-mode */
+    width: min(100%, calc(1200px + 600px)) !important;
+    max-width: min(100%, calc(1200px + 600px)) !important;
+    padding: 0 auto !important;
+  }
+  .page > #quartz-body {
+    & div.center,
+    & footer {
+      min-width: calc(100% - 3rem) !important;
+      max-width: calc(100% - 3rem) !important;
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
