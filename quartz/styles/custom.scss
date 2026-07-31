@@ -1,6 +1,117 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+:root {
+  --light: hsl(0, 0%, 100%);
+  --lightgray: hsl(0, 0%, 94%);
+  --gray: hsl(0, 0%, 50%);
+  --darkgray: hsl(0, 0%, 12%);
+  --dark: hsl(0, 0%, 6%);
+  --secondary: hsl(227, 0%, 13%);
+  --tertiary: hsl(226, 0%, 18%);
+  --highlight: rgba(167, 135, 71, 0.15);
+  --textHighlight: rgba(167, 135, 71, 0.3);
+}
+
+:root[saved-theme="dark"] {
+  --light: hsl(227, 0%, 13%);
+  --lightgray: hsl(226, 0%, 18%);
+  --gray: hsl(227, 0%, 30%);
+  --darkgray: #ccc;
+  --dark: #e0e0e0;
+  --secondary: #a78747;
+  --tertiary: #c9a55e;
+  --highlight: rgba(167, 135, 71, 0.2);
+  --textHighlight: rgba(167, 135, 71, 0.35);
+  --link-color: #a78747;
+  --link-color-hover: #c9a55e;
+  --accent: #a78747;
+}
+
+:root[saved-theme="dark"] body,
+:root[saved-theme="dark"] .page,
+:root[saved-theme="dark"] #quartz-body,
+:root[saved-theme="dark"] .center,
+:root[saved-theme="dark"] article {
+  background-color: var(--light) !important;
+  color: var(--darkgray) !important;
+}
+
+:root[saved-theme="dark"] .sidebar.left,
+:root[saved-theme="dark"] .sidebar.right,
+:root[saved-theme="dark"] .sidebar {
+  background-color: var(--lightgray) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+:root[saved-theme="dark"] .callout {
+  --color: var(--accent) !important;
+  --border: rgba(167, 135, 71, 0.28) !important;
+  --bg: rgba(167, 135, 71, 0.14) !important;
+}
+
+:root[saved-theme="dark"] blockquote {
+  border-inline-start-color: rgba(167, 135, 71, 0.7) !important;
+  color: var(--darkgray) !important;
+}
+
+:root[saved-theme="dark"] blockquote p {
+  margin: 0;
+  padding-left: 0.75rem !important;
+}
+
+:root[saved-theme="dark"] code:not(pre code) {
+  background-color: hsla(223, 17%, 8%, 0.438) !important;
+  padding: 0.15em 0.35em !important;
+  border-radius: 0.25rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+:root[saved-theme="dark"] pre,
+:root[saved-theme="dark"] pre code {
+  background-color: hsl(220, 16%, 10%) !important;
+  color: #f2e8cf !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[saved-theme="dark"] strong,
+:root[saved-theme="dark"] b {
+  color: #e8a8b9 !important;
+}
+
+:root[saved-theme="dark"] h2 {
+  color: var(--accent) !important;
+}
+
+:root[saved-theme="dark"] a.internal,
+:root[saved-theme="dark"] a.external {
+  color: var(--link-color) !important;
+}
+
+:root[saved-theme="dark"] a.internal.tag-link,
+:root[saved-theme="dark"] a.internal.tag-link::before {
+  color: var(--link-color) !important;
+  background-color: transparent !important;
+}
+
+.sidebar.left,
+.sidebar.right,
+.sidebar {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+a.internal,
+a.external {
+  background-color: var(--lightgray) !important;
+}
 
 @media all and (min-width: 1200px) {
   div#quartz-root.page {
@@ -13,12 +124,14 @@
     padding: 0 !important;
     margin: 0 !important;
   }
+
   div#quartz-root.page div#quartz-body {
     /* workaround for reader-mode */
     width: min(100%, calc(1200px + 600px)) !important;
     max-width: min(100%, calc(1200px + 600px)) !important;
     padding: 0 auto !important;
   }
+
   .page > #quartz-body {
     & div.center,
     & footer {
