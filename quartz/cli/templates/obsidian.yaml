@@ -2,7 +2,7 @@
 # Template: obsidian
 # Optimized for Obsidian vaults with full OFM support and shortest link resolution.
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Horizon =][=
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true

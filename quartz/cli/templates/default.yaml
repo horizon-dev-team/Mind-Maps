@@ -2,7 +2,7 @@
 # Template: default
 # A clean Quartz setup with sensible defaults.
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Horizon =][=
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
